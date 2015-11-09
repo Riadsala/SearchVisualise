@@ -12,6 +12,7 @@ for (person in people)
 # tell R that person and targetPresent are categorical factors
 dat$person = as.factor(dat$person)
 dat$targetPresent = as.factor(dat$targetPresent)
+levels(dat$block) = c("coloured", "uncoloured")
 
 # remove response = 3 (timed out?)
 dat = filter(dat, response!=3)
@@ -45,3 +46,22 @@ plt = plt + geom_path() + geom_errorbar()
 plt = plt + facet_wrap(~block, scales='free_y') + theme_bw()
 plt = plt +  scale_colour_brewer(palette="Set1")
 ggsave("pilotResults.pdf", height=4, width=8)
+
+
+dat = filter(dat, block=='coloured')
+
+# sample to get CI estimates 
+ii = 0
+for (n in seq(6,72,6))
+{
+    ii = ii + 1
+sdat = dat[sample(x=nrow(dat), size=n),]
+m[ii] = mean(sdat$responseTime)
+stderr[ii] = sd(sdat$responseTime)/sqrt(n)
+
+}
+
+
+plt = ggplot(data.frame(m = m, n=seq(6,72,6), lower=m-1.96*stderr, upper=m+1.96*stderr), aes(x=n, y=m, ymin=lower, ymax=upper))
+plt = plt + geom_errorbar() + geom_point() + scale_y_continuous(limits=c(0.3,0.7))
+plt 
