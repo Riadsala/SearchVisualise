@@ -1,0 +1,62 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Barr et~al.(2013)Barr, Levy, Scheepers, and Tily]{barr2013}
+Dale~J Barr, Roger Levy, Christoph Scheepers, and Harry~J Tily.
+\newblock Random effects structure for confirmatory hypothesis testing: Keep it
+  maximal.
+\newblock \emph{Journal of memory and language}, 68\penalty0 (3):\penalty0
+  255--278, 2013.
+
+\bibitem[Bates et~al.(2015)Bates, M{\"a}chler, Bolker, and Walker]{bates2015}
+Douglas Bates, Martin M{\"a}chler, Ben Bolker, and Steve Walker.
+\newblock Fitting linear mixed-effects models using {lme4}.
+\newblock \emph{Journal of Statistical Software}, 67\penalty0 (1):\penalty0
+  1--48, 2015.
+\newblock \doi{10.18637/jss.v067.i01}.
+
+\bibitem[Binder et~al.(2014)Binder, Hagelweide, Wang, Kornysheva, Grefkes,
+  Fink, and Schubotz]{binder2014}
+Ellen Binder, Klara Hagelweide, Ling~E Wang, Katja Kornysheva, Christian
+  Grefkes, Gereon~R Fink, and Ricarda~I Schubotz.
+\newblock Sensory-guided motor tasks benefit from mental training based on
+  serial prediction.
+\newblock \emph{Neuropsychologia}, 54:\penalty0 18--27, 2014.
+
+\bibitem[Crammond(1997)]{crammond1997}
+Donald~J Crammond.
+\newblock Motor imagery: never in your wildest dream.
+\newblock \emph{Trends in neurosciences}, 20\penalty0 (2):\penalty0 54--57,
+  1997.
+
+\bibitem[Crawley(2012)]{crawley2012}
+Michael~J Crawley.
+\newblock \emph{The R book}.
+\newblock John Wiley \& Sons, 2012.
+
+\bibitem[Fischer and Whitney(2014)]{fischer-whitney2014}
+Jason Fischer and David Whitney.
+\newblock Serial dependence in visual perception.
+\newblock \emph{Nature neuroscience}, 17\penalty0 (5):\penalty0 738--743, 2014.
+
+\bibitem[Fox(2011)]{fox2011}
+John Fox.
+\newblock \emph{An R and S-Plus companion to applied regression}.
+\newblock Sage, 2011.
+
+\bibitem[{R Core Team}(2015)]{R}
+{R Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2015.
+\newblock URL \url{https://www.R-project.org}.
+
+\bibitem[Reinhart et~al.(2015)Reinhart, McClenahan, and Woodman]{reinhart2015}
+Robert~MG Reinhart, Laura~J McClenahan, and Geoffrey~F Woodman.
+\newblock Visualizing trumps vision in training attention.
+\newblock \emph{Psychological science}, pages 1114--1122, 2015.
+
+\end{thebibliography}

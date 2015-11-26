@@ -158,6 +158,8 @@ for blk = 1:2
             % display stimulus
             Screen('DrawTexture', stimuliScrn, t_stimuli);
             Screen(stimuliScrn, 'flip');
+            imageArray=Screen('GetImage', t_stimuli);
+            imwrite(imageArray, 'exStimulus.png');
             % wait for key press or max time
             if strcmp(conditionList(run).visualise, 'no') || (tr > 2)
                 tic;
