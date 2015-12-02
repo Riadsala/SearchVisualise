@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex visualiseSearch"] 1448463342 "visualiseSearch.aux" "visualiseSearch.bbl" "visualiseSearch" 1448463343
+["bibtex visualiseSearch"] 1448987753 "visualiseSearch.aux" "visualiseSearch.bbl" "visualiseSearch" 1449050697
   "/usr/local/texlive/2013/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "literature.bib" 1448463339 2385 7614a541b7816021178db8baf287e091 ""
-  "visualiseSearch.aux" 1448463343 2421 684fb021c471d504fe23e24a3b83720f ""
+  "literature.bib" 1448987752 4424 465ddcc9a057f9c78cfb05fc6f39739d ""
+  "visualiseSearch.aux" 1449050696 2776 d7b6aa5e50eaf49187f6f665d25a4a00 ""
   "visualiseSearch.bcf" 0 -1 0 ""
   (generated)
   "visualiseSearch.bbl"
   "visualiseSearch.blg"
-["pdflatex"] 1448463342 "visualiseSearch.tex" "visualiseSearch.pdf" "visualiseSearch" 1448463343
+["pdflatex"] 1449050696 "visualiseSearch.tex" "visualiseSearch.pdf" "visualiseSearch" 1449050697
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -72,10 +72,10 @@
   "figs/exStimExp1.png" 1446561059 29227 e66dc6500ade4329e1e1fe2b09d64226 ""
   "svglov3.clo" 1261139114 3809 f8e29af71acd1bd1b2a58b6166058c66 ""
   "svjour3.cls" 1222819200 47679 e70406260d62f66f2e7794a095f721ff ""
-  "visualiseSearch.aux" 1448463343 2421 684fb021c471d504fe23e24a3b83720f ""
-  "visualiseSearch.bbl" 1448463342 2496 de42be3de4df207ac43423d40e70c215 "bibtex visualiseSearch"
-  "visualiseSearch.tex" 1448463241 10871 b6c1d6bf498ce05c6c5ea304421a43e6 ""
+  "visualiseSearch.aux" 1449050696 2776 d7b6aa5e50eaf49187f6f665d25a4a00 ""
+  "visualiseSearch.bbl" 1448987753 3910 02828e8bb83eae3fabd8051773d26207 "bibtex visualiseSearch"
+  "visualiseSearch.tex" 1449050696 14852 e47ce0fd94175603ab1b5f74a674a27a ""
   (generated)
-  "visualiseSearch.pdf"
-  "visualiseSearch.log"
   "visualiseSearch.aux"
+  "visualiseSearch.log"
+  "visualiseSearch.pdf"

@@ -1,6 +1,8 @@
 function pilotExperiment
 
 
+% visual degrees 1 pixel = 0.0309
+
 close all
 % %% get subject number and randomise random seed
 subjNum = input('input subject number: ');
