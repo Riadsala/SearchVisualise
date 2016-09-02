@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: visualiseSearch.aux
 The style file: plainnat.bst
 Database file #1: literature.bib
-You've used 13 entries,
+You've used 15 entries,
             2773 wiz_defined-function locations,
-            684 strings with 7137 characters,
-and the built_in function-call counts, 6566 in all, are:
-= -- 604
-> -- 366
-< -- 7
-+ -- 124
-- -- 111
-* -- 534
-:= -- 986
-add.period$ -- 43
-call.type$ -- 13
-change.case$ -- 73
-chr.to.int$ -- 13
-cite$ -- 26
-duplicate$ -- 309
-empty$ -- 514
-format.name$ -- 128
-if$ -- 1391
+            697 strings with 7516 characters,
+and the built_in function-call counts, 7455 in all, are:
+= -- 684
+> -- 415
+< -- 8
++ -- 141
+- -- 126
+* -- 608
+:= -- 1129
+add.period$ -- 52
+call.type$ -- 15
+change.case$ -- 83
+chr.to.int$ -- 15
+cite$ -- 30
+duplicate$ -- 350
+empty$ -- 587
+format.name$ -- 145
+if$ -- 1574
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 77
-num.names$ -- 52
-pop$ -- 140
+missing$ -- 17
+newline$ -- 90
+num.names$ -- 60
+pop$ -- 161
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 72
 quote$ -- 0
-skip$ -- 256
+skip$ -- 284
 stack$ -- 0
-substring$ -- 287
-swap$ -- 58
+substring$ -- 316
+swap$ -- 60
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 133
+type$ -- 150
 warning$ -- 0
-while$ -- 57
+while$ -- 65
 width$ -- 0
-write$ -- 182
+write$ -- 213

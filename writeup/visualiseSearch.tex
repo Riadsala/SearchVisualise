@@ -8,7 +8,7 @@
 %
 % This template includes a few options for different layouts and
 % content for various journals. Please consult a previous issue of
-% your journal as needed.
+% your journal as needed. b
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -24,6 +24,8 @@
 %
 \usepackage{graphicx}
 \usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{subfigure}
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
@@ -69,7 +71,7 @@
 \maketitle
 
 \begin{abstract}
-We propose a replication and generalisation of some striking results on the effect of mental imagery on visual search performance. 
+Striking results recently demonstrated that visualising search for a target can facilitate visual search for that target on subsequent trials \citep{reinhart2015}. This visualisation benefit was even greater than the benefit of actually repeating search for the target. We registered a close replication and generalisation of the original experiment. Our results show clear benefits of repeatedly searching for the same target, but we found no benefit associated with visualisation. The difficulty of the search task and the ability to monitor compliance with instructions to visualise are both possible explanations for the failure to replicate, and both should be carefully considered in future research exploring this interesting phenomenon.
 \keywords{mental imagery \and visual attention, \and learning \and visual search \and perception \and open materials}
 % \PACS{PACS code1 \and PACS code2 \and more}
 % \subclass{MSC code1 \and MSC code2 \and more}
@@ -89,7 +91,7 @@ On the one hand, this result is consistent with previous work reviewed above dem
 Definitively establishing why visualisation is more effective than actually performing the task is of critical importance not only for understanding the nature of visual imagery, but also because it could lead to improved imagery-based training or therapy regimes like those noted above. If it is the case that visualisation is more effective because it isolates the facilitative components of the task, for example, vague or incomplete representations may in fact be superior to less vivid or detailed ones. We therefore plan to first replicate the original study by \cite{reinhart2015}, focusing specifically on the behavioural results. Omitting the recording of EEG allows us to use a slightly simplified stimuli design to test the original results, without the second irrelevant coloured distractor (only included in the original study to allow for comparison of the lateralised N2PC component between the two hemifields). This will provide independent confirmation of this interesting result. We will also analyse the data in more depth using linear-mixed-effect models and explore how the visualisation effect changes over time and is affected by to serial dependencies \citep{fischer-whitney2014}. Provided we replicate the original findings, we also plan to run a second experiment using a more traditional visual search paradigm using an array of C's of uniform color, in which the observer's task is to determine whether the target (a C of the cued orientation) is present or absent. If the superiority of visualisation over practice at search is due to proactive interference from the distractors when the search array is presented, there should be even larger benefits of visualisation when serial search of all the items is required.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experiment 1}
+\section{Experiment}
 \label{sec:exp1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -102,7 +104,6 @@ The aim of this experiment is to directly replicate the behavioural effect of vi
 Thirty participants will be recruited via from amongst the student population at the University of Aberdeen. All participants will have normal or corrected-to-normal vision. 
 
 The sample size of $n=30$ is based on a power analysis for a one-tailed paired $t$-test, with a power of 0.9 and effect size of $d=0.55$. This should be sufficient for the replication given the original effect sizes of $0.61<d<0.72$ ($n=18$).
-
 
 \subsubsection{Stimuli}
 
@@ -120,45 +121,102 @@ The first block of trials was pre-empted by a set of ten practice trials. The pr
 
 \subsection{Planned Analyses}
 
-We plan to carry out the analysis in several different ways. Firstly, we will repeat the analysis from \cite{reinhart2015} in which the median reaction time for trial 1,2 and 3 within a (normal) run is compared to the median reaction time for trial 3 in a visualise-run. A one-tailed paired $t$-test will be used for this comparison. We will include a Bayesian t-test which will enable comparison of the expected difference between visualisation and trials 1-3 in the run to the null hypothesis (no difference). We will also directly compare/combine our results with those of \cite{reinhart2015}, who have already provided us with the summary data from their Experiment 1. 
+We plan to carry out the analysis in several different ways. Firstly, we will repeat the analysis from \cite{reinhart2015} in which the median\footnote{This is a mistake made in our pre-registered submission. \cite{reinhart2015} used mean reaction time rather than median, and we follow suit.}  reaction time for trial 1,2 and 3 within a (normal) run is compared to the median reaction time for trial 3 in a visualise-run. A one-tailed paired $t$-test will be used for this comparison. We will include a Bayesian t-test\footnote{\url{http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/inference/bayes_normalposterior.swf}} which will enable comparison of the expected difference between visualisation and trials 1-3 in the run to the null hypothesis (no difference). We will also directly compare/combine our results with those of \cite{reinhart2015}, who have already provided us with the summary data from their Experiment 1. 
 
 Additionally, we will also analyse our data in more detail using a linear mixed-effect model (\texttt{lme4} \citep{bates2015, R}), following the guidelines on model design given by \cite{barr2013} This allows us to include trial-to-trial variation in the analysis rather than using aggregate statistics. As the distribution of reaction times is expected to be skewed, we use log reaction times in the analysis. We will treat \textit{trial number} (within run) as a numerical factor, and will investigate non-linear regression if required (e.g. if there is a clear asymptote). However, given the results presented by \cite{reinhart2015}, a linear model should suffice. We will follow the model simplification procedure put forward by \cite[chapter 9]{crawley2012}. $p$-values will be obtained via the \texttt{Anova} function from the \texttt{car} package \citep{fox2011}.
 
-Finally, we will also compare the visualisation effect to the effect of serial dependency. More specifically, we will investigate how reaction time varies on trial three depending on what preceded it (present-present, absent-absent, present-absent, absent-present, visualise-visualise). This will be modelled using another linear mixed-effect model with a five-level factor describing the previous two trials, and a two-level factor for whether trial three is a target absent or present trial.
+Finally, we will also compare the visualisation effect to the effect of serial dependency. More specifically, we will investigate how reaction time varies on trial three depending on what preceded it (present-present, absent-absent, present-absent, absent-present, visualise-visualise). This will be modelled using another linear mixed-effect model with a five-level factor describing the previous two trials, and a two-level factor for whether trial three is a target absent or present trial\footnote{Due to the failure to replicate the original findings, we did not carry out this part of the planned analysis}.
 
 \subsection{Results and Discussion}
 
-\begin{center}
-\textit{blank}
-\end{center}
+All participants were accurate at the task ($88\%-99\%$) and incorrect trials were removed from further analysis. The reaction times from our study are presented together with those of \cite{reinhart2015} in Figure \ref{fig:meanResults} and the $t$-test based analysis is given in Table \ref{tab:ttestResults}. The first two lines of this table compare performance across successive trials of search for the same target and demonstrate that we have a repetition benefit of around 30 ms on each trial where the target repeats from the last trial. The remaining lines of the table repeat the t-tests used by \cite{reinhart2015} to compare the effect of visualising search to actually performing search. Participants were slower on trial 3 after visualization than compared to all three trials within a run of actual search. Because we planned to do a one-tailed test, and the direction of these effects is the opposite of what was predicted, they are deemed non-significant.  
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experiment 2}
-\label{sec:exp2}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{figs/meanResults.pdf}
+\caption{Results over all participants. The mean reaction time was first computed for each participant, and then the mean of the means and associated standard error were plotted. Note: in order to facilitate comparison with \cite{reinhart2015}, the error bars indicate +/-1 standard error, rather than 95\% confidence intervals.}
+\label{fig:meanResults}
+\end{figure}
 
-The aim of Experiment 2 is to investigate whether the effect reported by \cite{reinhart2015} applies to more standard visual search paradigms, or if it is specific to the target matching task they used in their original study. Hence, in this study we remove the colour cue from the stimuli and change the observer's task from `does the green item match the target template?' to `is the target present of absent in this stimulus?.' This study will only be run if we successfully replicate the visualisation effect in Experiment 1. 
+\begin{table}
+\centering
+\small
+\caption{$t$-test ($p$-value) results. All $t$ tests are paired and one-tailed (is the second value less than the first).}
+\label{tab:ttestResults}
+\begin{tabular}{cc|rrc}
+ &			& difference & $t$-value & $p$-value \\
+ 	\hline
+Stimulus 1 & Stimulus 2 	&	36 ms		& 5.78	& $<0.001$\\
+Stimulus 1 & Stimulus 3		&	26 ms		& 4.25	& $<0.001$\\
+\hline
+Stimulus 1 & Visualise 3 	&	-21 ms		& -1.83 & \textit{n.s.}	\\
+Stimulus 2 & Visualise 3 	&	-57 ms		& -4.80 & \textit{n.s.}	\\
+Stimulus 3 & Visualise 3 	&	-47 ms		& -3.50 & \textit{n.s.}	\\
+\end{tabular}
+\end{table}
 
-\subsection{Methods}
+The results from each of the 30 participants are shown separately in Figure \ref{fig:indivResults}. As the reaction times give a skewed distribution, we calculated the mean and $95\%$ confidence intervals after log-transforming the data. We further analysed these data with a linear mixed effects model. Reaction times were log-transformed, trial number was treated as a continuous variable, and we allowed for a maximal (crossed) random effects structure. All effects were statistically significant ($p<0.05$) and are shown in Table \ref{tab:lmerResults}. The negative effect of trial number confirms that we have a practise effect: as with \cite{reinhart2015}, reaction times decrease over the course of a run of trials. However, as visualisation has a positive effect, we conclude that participants are slower in the visualisation condition. The interaction is also statistically significant, with reaction times decreasing faster for trials after the visualisation condition. Upon inspection of Figure \ref{fig:indivResults}, it appears to be primarily driven by a few participants with relatively slow reaction times on Trial 3 in the visualisation condition, followed by an improvement for Trials 4 and 5. This pattern is consistent with task-switching costs (e.g. Rogers and Monsell, 1996).
 
-Identical to Experiment 1, except the colour cue has been removed and participants report whether the target is present or absent. As this task is more difficult, stimulus display time (and the visualisation time) will be increased from 2000ms to 5000ms. 
+\begin{figure}
+\centering
+\includegraphics[width=12cm]{figs/indivResults.pdf}
+\caption{Results from each participant. Means and $95\%$ confidence intervals are computed after a log transform. The results have been transformed (using the exponential function) back into the original units for ease of reading the plots and comparing to the original data.}
+\label{fig:indivResults}
+\end{figure}
 
-\subsection{Results and Discussion}
+\begin{table}
+\centering
+\small
+\caption{Linear mixed effects model fit. Reaction time was log transformed. All effects were statistically significant under a Type II Wald $\chi^2$ test.}
+\label{tab:lmerResults}
+\begin{tabular}{r|cccc}
+ 	Effect	& $\beta$ & std. error &  $t$-value 	& $p$-value\\
+ 	\hline
+ 	(intercept) 	& 6.38 		& 0.04 	& 163.64 	& - \\
+ 	trial number 	& -0.02 	& 0.003 & -8.11 	&$<0.001$\\
+ 	visualise 		& 0.17		& 0.04	& 3.92 		&$0.007$\\
+ 	interaction		& -0.03 	& 0.01	& -3.39 	&$<0.001$\\
+\end{tabular}
+\end{table}
 
-\begin{center}
-\textit{blank}
-\end{center}
+Finally, we use Bayesian methods \citep{dienes2008} to compute the posterior distribution of effect, taking the previously published findings from \cite{reinhart2015} as the prior. As can be seen in Figure \ref{fig:bayesResult}, when we update our beliefs based on the new data presented here, we end up with a posterior distribution centred around zero and conclude that there is no evidence of an effect in either direction.
+
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{figs/bayesResult.pdf}
+\caption{The purple graph shows the posterior distribution of the difference in mean reaction times between Trial 1 in the stimulus condition and Trial 3 in the visualise condition. The red graph shows the prior, taken from \cite{reinhart2015}, while the green line shows the likelihood of our data.}
+\label{fig:bayesResult}
+\end{figure}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Experiment 2}
+% \label{sec:exp2}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The aim of Experiment 2 is to investigate whether the effect reported by \cite{reinhart2015} applies to more standard visual search paradigms, or if it is specific to the target matching task they used in their original study. Hence, in this study we remove the colour cue from the stimuli and change the observer's task from `does the green item match the target template?' to `is the target present of absent in this stimulus?.' This study will only be run if we successfully replicate the visualisation effect in Experiment 1. 
+
+% \subsection{Methods}
+
+% Identical to Experiment 1, except the colour cue has been removed and participants report whether the target is present or absent. As this task is more difficult, stimulus display time (and the visualisation time) will be increased from 2000ms to 5000ms. 
+
+% \subsection{Results and Discussion}
+
+% \begin{center}
+% \textit{blank}
+% \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{General Discussion}
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+We find no evidence that ``visualizing trumps vision in training attention.'' Indeed, mean reaction times to find a target are actually slower when performing search following visualisation compared to an equivalent amount of practice actually searching for that target. We offer two explanations for the discrepancy between our findings and the original results.
 
-\begin{center}
-\textit{blank}
-\end{center}
+First, the most salient difference between our paradigm and the one presented by \cite{reinhart2015} is the additional task-irrelevant colour singleton, included in the original design to rule out physical-stimulus confounds in the lateralised ERP component of interest (the N2PC). This additional coloured item in the array seemed like an unimportant detail when we planned our (purely behavioural) replication, so we did not include it. However, this small modification may have made our search task slightly easier than theirs. Reaction times in our version of the experiment were indeed slightly faster than in the original, although it is important to note that it is not the case that participants who responded relatively slowly in our experiment were more likely to show an effect in the original direction (quite the opposite in fact, see Figure \ref{fig:indivResults}). Obviating the need to search, as they did in their Experiment 4, eliminated the benefit of visualisation. It may be the case that removing one salient distractor, as we did in our study, has a similar impact. If so, this is an important detail to note for any researcher interested in trying to study the effect of visualisation on search: the search may need to be of a minimum level of difficulty for the effect of visualisation to be observed. 
+ 
+A second important difference is that we did not measure EEG. While the measurement of EEG itself does not influence behaviour, perhaps participants wearing an EEG cap believed that their compliance with instructions to "visualise" could actually be verified by the experimenter, and hence were more likely to follow that instruction. Effects along these lines have been found in the eye-tracking literature \citep{nasiopoulos2015} in which participants modify their viewing behaviour when they know their eyes are being tracked. Instructions to visualise did have an impact on reaction time in our study (albeit opposite to what was found previously) so there was some evidence that our participants were attempting to comply with instructions. However, they may not have been as consistent or effortful in their imagery compared to a group of participants wearing a device that they have been told measures their brain activity. If this is the case, it would be important for researchers to be aware that a putative ability to monitor compliance with visualisation instructions is a key requirement for finding the effect. For the record, the participants in our study were instructed as follows: ``When prompted to visualise search you are required to generate a mental image of the search array in your mind and imagine searching through this array for the green cue C you have been shown in the trial.'' A precise description of how researchers instruct and/or verify visual imagery in their participants should be made available in future studies on this topic so that the importance of this factor can be determined.
 
+By failing to replicate the original effect, it is our hope that this report can provide important guidance to future researchers who may wish to build on the findings of  \cite{reinhart2015}. To be useful in clinical or training settings, as suggested by the authors, the imagery effect must be robust and the boundary conditions need to be clearly and consistently documented. Moreover, for the potential theoretical implications of their results to be fully developed, we require a thorough understanding of the conditions under which it does, and does not, occur.
 
 % BibTeX users please use one of
 % \bibliographystyle{spbasic}      % basic style, author-year citations
@@ -170,4 +228,3 @@ Identical to Experiment 1, except the colour cue has been removed and participan
 
 \end{document}
 % end of file template.tex
-

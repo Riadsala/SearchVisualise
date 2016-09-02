@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{15}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,6 +23,12 @@ Douglas Bates, Martin M{\"a}chler, Ben Bolker, and Steve Walker.
 Michael~J Crawley.
 \newblock \emph{The R book}.
 \newblock John Wiley \& Sons, 2012.
+
+\bibitem[Dienes(2008)]{dienes2008}
+Zoltan Dienes.
+\newblock \emph{Understanding psychology as a science: An introduction to
+  scientific and statistical inference}.
+\newblock Palgrave Macmillan, 2008.
 
 \bibitem[Fischer and Whitney(2014)]{fischer-whitney2014}
 Jason Fischer and David Whitney.
@@ -53,6 +59,16 @@ David~E Lewis, Matthew~J O’Reilly, Sieu~K Khuu, and Joel Pearson.
 \newblock Conditioning the mind’s eye associative learning with voluntary
   mental imagery.
 \newblock \emph{Clinical Psychological Science}, page 2167702613484716, 2013.
+
+\bibitem[Nasiopoulos et~al.(2015)Nasiopoulos, Risko, Foulsham, and
+  Kingstone]{nasiopoulos2015}
+Eleni Nasiopoulos, Evan~F. Risko, Tom Foulsham, and Alan Kingstone.
+\newblock Wearable computing: Will it make people prosocial?
+\newblock \emph{British Journal of Psychology}, 106\penalty0 (2):\penalty0
+  209--216, 2015.
+\newblock ISSN 2044-8295.
+\newblock \doi{10.1111/bjop.12080}.
+\newblock URL \url{http://dx.doi.org/10.1111/bjop.12080}.
 
 \bibitem[Pearson et~al.(2015)Pearson, Naselaris, Holmes, and
   Kosslyn]{pearson2015}
